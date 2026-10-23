@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover premium cars and book your next journey with DriveEase.">
+  <title>DriveEase | Premium Car Rentals</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">
+      <span class="logo-icon"><i class="fa-solid fa-car-side"></i></span>
+      Drive<span>Ease.</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#cars">Our Cars</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#booking">Book Now</a>
+      <a href="#history">My Bookings</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> YOUR JOURNEY, YOUR RULES</span>
+        <h1>Drive your<br>dreams. <span>Feel the freedom.</span></h1>
+        <p>Discover premium cars, enjoy effortless bookings, and make every journey unforgettable.</p>
+
+        <div class="hero-actions">
+          <a href="#cars" class="btn btn-primary">Explore Cars <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#why-us" class="btn btn-outline">Discover More</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>20+</strong><span>Premium Cars</span></div>
+          <div><strong>24/7</strong><span>Customer Support</span></div>
+          <div><strong>100%</strong><span>Easy Booking</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image"></div>
+        <div class="floating-card">
+          <span class="floating-icon"><i class="fa-solid fa-shield-halved"></i></span>
+          <div><strong>Ride with confidence</strong><small>Comfort meets reliability</small></div>
+        </div>
+        <div class="hero-tag"><i class="fa-solid fa-star"></i> Premium experience</div>
+      </div>
+    </section>
+
+    <section class="search-strip">
+      <div class="search-intro">
+        <span class="section-kicker">FIND YOUR RIDE</span>
+        <h2>Your next adventure starts here.</h2>
+      </div>
+      <a href="#cars" class="btn btn-dark">Browse Fleet <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <section class="section cars-section" id="cars">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">OUR COLLECTION</span>
+          <h2>Find your perfect <span>drive.</span></h2>
+          <p>From city rides to luxury escapes, there's a car for every journey.</p>
+        </div>
+        <span class="car-count" id="carCount">6 vehicles</span>
+      </div>
+
+      <div class="filter-bar">
+        <label class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="searchInput" placeholder="Search by car name..." aria-label="Search cars">
+        </label>
+
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="SUV">SUV</option>
+          <option value="Sedan">Sedan</option>
+          <option value="Luxury">Luxury</option>
+          <option value="Hatchback">Hatchback</option>
+        </select>
+
+        <select id="priceFilter" aria-label="Filter by daily price">
+          <option value="all">Any Price</option>
+          <option value="low">Under ₹3,000/day</option>
+          <option value="mid">₹3,000–₹5,000/day</option>
+          <option value="high">Above ₹5,000/day</option>
+        </select>
+      </div>
+
+      <div class="car-grid" id="carGrid"></div>
+      <div class="empty-state" id="emptyCars" hidden>
+        <i class="fa-solid fa-car-side"></i>
+        <h3>No cars found</h3>
+        <p>Try changing your search or filters.</p>
+      </div>
+    </section>
+
+    <section class="why-section" id="why-us">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">THE DRIVE EASE DIFFERENCE</span>
+          <h2>More than just a <span>ride.</span></h2>
+          <p>We make every step of your journey simple and comfortable.</p>
+        </div>
+      </div>
+
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Quick & Easy</h3>
+          <p>Find your car and submit your booking request in just a few clicks.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-wallet"></i></div>
+          <h3>Clear Pricing</h3>
+          <p>See the daily rate and estimated rental total before booking.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-car"></i></div>
+          <h3>Great Selection</h3>
+          <p>Choose a vehicle that matches your plans, style, and budget.</p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3>Smart Booking</h3>
+          <p>Keep track of bookings and prevent overlapping dates for the same car.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking">
+      <div class="booking-info">
+        <span class="section-kicker">LET'S GET YOU MOVING</span>
+        <h2>Your next trip is just a <span>booking away.</span></h2>
+        <p>Complete the form to submit your rental request. Choose your dates carefully and we'll calculate your estimated rental cost.</p>
+        <div class="booking-note">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Booking dates are checked before your request is saved.</span>
+        </div>
+        <div class="booking-note">
+          <i class="fa-solid fa-lock"></i>
+          <span>Your demo booking details stay in this browser.</span>
+        </div>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <h3>Reserve your ride <i class="fa-solid fa-arrow-right"></i></h3>
+        <p class="form-subtitle">Fill in your trip details below.</p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="customerName">Full Name</label>
+            <input type="text" id="customerName" placeholder="Enter your name" minlength="2" maxlength="60" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="customerPhone">Phone Number</label>
+            <input type="tel" id="customerPhone" placeholder="10-digit mobile number" inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel" required>
+          </div>
+          <div class="form-group full-width">
+            <label for="carSelect">Select Car</label>
+            <select id="carSelect" required>
+              <option value="">Choose your car</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startDate">Pickup Date</label>
+            <input type="date" id="startDate" required>
+          </div>
+          <div class="form-group">
+            <label for="endDate">Return Date</label>
+            <input type="date" id="endDate" required>
+          </div>
+        </div>
+
+        <div class="price-summary">
+          <span><i class="fa-solid fa-receipt"></i> Estimated total</span>
+          <strong id="estimatedTotal">₹0</strong>
+        </div>
+        <p class="form-hint" id="dateHint">Choose a car and your rental dates to calculate the total.</p>
+        <button type="submit" class="btn btn-primary submit-btn">Confirm Booking Request <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="form-disclaimer">Demo project · No real payment is collected.</p>
+      </form>
+    </section>
+
+    <section class="section history-section" id="history">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">YOUR JOURNEY LOG</span>
+          <h2>My <span>bookings.</span></h2>
+          <p>View or cancel your saved booking requests.</p>
+        </div>
+        <span class="car-count" id="bookingCount">0 bookings</span>
+      </div>
+      <div class="history-grid" id="bookingHistory"></div>
+      <div class="empty-state" id="emptyHistory">
+        <i class="fa-regular fa-calendar"></i>
+        <h3>No bookings yet</h3>
+        <p>Your confirmed demo booking requests will appear here.</p>
+        <a href="#cars" class="btn btn-outline">Explore Cars</a>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <span class="section-kicker">YOUR ADVENTURE AWAITS</span>
+        <h2>Ready to hit the road?</h2>
+        <p>Find your perfect ride and make your next journey memorable.</p>
+      </div>
+      <a href="#cars" class="btn btn-light">Find Your Car <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo footer-logo">
+      <span class="logo-icon"><i class="fa-solid fa-car-side"></i></span>
+      Drive<span>Ease.</span>
+    </a>
+    <p>Every journey deserves a better drive.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> DriveEase. All rights reserved.</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
